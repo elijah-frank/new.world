@@ -8,6 +8,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 
 @Mod("examplemod")
@@ -16,7 +17,7 @@ public class newworld {
 
     public newworld() {
         // Register ourselves for server and other game events we are interested in
-        net.neoforged.neoforge.common.NeoForge.EVENT_BUS.register(null);
+        NeoForge.EVENT_BUS.register(this);
         LOGGER.info("Hello World Mod initialized!");
     }
 
